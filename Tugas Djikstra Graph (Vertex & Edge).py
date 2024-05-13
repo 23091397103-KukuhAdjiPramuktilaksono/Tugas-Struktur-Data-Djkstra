@@ -38,5 +38,25 @@ class Peta:
             del self.cityList[kota1][kota2]
             return True
         return False
+
+     def djikstra(self, source):
+        distance = {}
+        for city in self.cityList:
+            distance[city] = float("inf")
+        distance[source] = 0
+
+        unvisited_cities = list(self.cityList.keys())
+
+        while unvisited_cities:
+            min_distance = float("inf")
+            closest_city = None
+
+            for city in unvisited_cities:
+                if distance[city] < min_distance:
+                    min_distance = distance[city]
+                    closest_city = city
+
+            unvisited_cities.remove(closest_city)
+
     
     
