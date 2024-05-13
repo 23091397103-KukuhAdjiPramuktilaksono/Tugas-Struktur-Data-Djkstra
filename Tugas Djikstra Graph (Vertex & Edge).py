@@ -58,5 +58,27 @@ class Peta:
 
             unvisited_cities.remove(closest_city)
 
+            for neighbor, jarak in self.cityList[closest_city].items():
+                jarakNeighbor = distance[closest_city] + jarak
+                if jarakNeighbor < distance[neighbor]:
+                    distance[neighbor] = jarakNeighbor
+        return distance
+
+petaIndonesia = Peta()
+petaIndonesia.tambahkanKota("Bangkalan")
+petaIndonesia.tambahkanKota("Lamongan")
+petaIndonesia.tambahkanKota("Bojonegoro")
+petaIndonesia.tambahkanKota("Gresik")
+petaIndonesia.tambahkanKota("Surabaya")
+petaIndonesia.tambahkanKota("Sidoarjo")
+petaIndonesia.tambahkanKota("Mojokerto")
+petaIndonesia.tambahkanKota("Nganjuk")
+petaIndonesia.tambahkanKota("Pasuruan")
+petaIndonesia.tambahkanKota("Malang")
+petaIndonesia.tambahkanKota("Probolinggo")
+petaIndonesia.tambahkanKota("Lumajang")
+petaIndonesia.tambahkanKota("Kediri")
+petaIndonesia.tambahkanKota("Blitar")
+
     
     
