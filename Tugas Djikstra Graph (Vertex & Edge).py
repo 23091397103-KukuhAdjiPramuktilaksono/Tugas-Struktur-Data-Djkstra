@@ -80,5 +80,41 @@ petaIndonesia.tambahkanKota("Lumajang")
 petaIndonesia.tambahkanKota("Kediri")
 petaIndonesia.tambahkanKota("Blitar")
 
+petaIndonesia.tambahkanJalan("Bangkalan", "Surabaya", 31)
+petaIndonesia.tambahkanJalan("Surabaya", "Sidoarjo", 26)
+petaIndonesia.tambahkanJalan("Sidoarjo", "Pasuruan", 45)
+petaIndonesia.tambahkanJalan("Pasuruan", "Probolinggo", 46)
+petaIndonesia.tambahkanJalan("Probolinggo", "Lumajang", 47)
+petaIndonesia.tambahkanJalan("Lumajang", "Malang", 142)
+petaIndonesia.tambahkanJalan("Malang", "Mojokerto", 127)
+petaIndonesia.tambahkanJalan("Mojokerto", "Gresik", 52)
+petaIndonesia.tambahkanJalan("Gresik", "Lamongan", 30)
+petaIndonesia.tambahkanJalan("Lamongan", "Bojonegoro", 88)
+petaIndonesia.tambahkanJalan("Bojonegoro", "Nganjuk", 55)
+petaIndonesia.tambahkanJalan("Nganjuk", "Kediri", 35)
+petaIndonesia.tambahkanJalan("Kediri", "Blitar", 40)
+petaIndonesia.tambahkanJalan("Blitar", "Malang", 76)
+petaIndonesia.tambahkanJalan("Surabaya", "Gresik", 20)
+petaIndonesia.tambahkanJalan("Sidoarjo", "Malang", 70)
+petaIndonesia.tambahkanJalan("Mojokerto", "Kediri", 80)
+petaIndonesia.tambahkanJalan("Lamongan", "Surabaya", 46)
+petaIndonesia.tambahkanJalan("Pasuruan", "Malang", 76)
+petaIndonesia.tambahkanJalan("Sidoarjo", "Mojokerto", 30)
+
+print('------------------------------')
+jarakSemuaKotaDariBangkalan = petaIndonesia.djikstra("Surabaya")
+print("Jarak kota berikut dari Surabaya adalah :")
+for city,distance in jarakSemuaKotaDariBangkalan.items():
+    print(city," adalah ",distance," KM")
+
+indonesia = ["Surabaya", "Sidoarjo", "Malang"]
+print(list(permutations(indonesia)))
+
+petaIndonesia.printPeta()
+print('------------------------------')
+petaIndonesia.hapusKota("Bangkalan")
+petaIndonesia.printPeta()
+
+
     
     
