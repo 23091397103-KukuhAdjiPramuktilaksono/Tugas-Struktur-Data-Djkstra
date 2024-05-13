@@ -114,7 +114,3 @@ petaIndonesia.printPeta()
 print('------------------------------')
 petaIndonesia.hapusKota("Bangkalan")
 petaIndonesia.printPeta()
-
-
-    
-    
